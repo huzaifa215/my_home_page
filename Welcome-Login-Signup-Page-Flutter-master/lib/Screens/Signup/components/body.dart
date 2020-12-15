@@ -2,8 +2,6 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Signup/components/background.dart';
-import 'package:flutter_auth/Screens/Signup/components/or_divider.dart';
-import 'package:flutter_auth/Screens/Signup/components/social_icon.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_button_dashbords.dart';
@@ -12,16 +10,8 @@ import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_auth/components/rounded_phone_number.dart';
 import 'package:flutter_auth/dashboards/admin.dart';
-import 'package:flutter_auth/dashboards/landlord.dart';
-import 'package:flutter_auth/dashboards/tenant.dart';
-import 'package:flutter_svg/svg.dart';
-
 import '../../../constants.dart';
-
-
 class Body extends StatelessWidget {
-  String dropdownValue = 'One';
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -45,7 +35,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.02),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 // admin dashbord
                 RoundedButtonDashbord(
@@ -63,11 +53,42 @@ class Body extends StatelessWidget {
                     );
                   },
                 ),
+                RoundedButtonDashbord(
+                  text: "Tenant",
+                  color: kPrimaryLightColor,
+                  textColor: Colors.black,
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Admin();
+                        },
+                      ),
+                    );
+                  },
+                ),
 
+                RoundedButtonDashbord(
+                  text: "LandLord",
+                  color: kPrimaryLightColor,
+                  textColor: Colors.black,
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Admin();
+                        },
+                      ),
+                    );
+                  },
+                ),
                 // SocalIcon(
+                //
                 //   iconSrc: "assets/icons/facebook.svg",
                 //   press: () {
-                //       LandLord();
+                //     return Admin() ;
                 //   },
                 // ),
                 // SocalIcon(
@@ -82,7 +103,6 @@ class Body extends StatelessWidget {
                 //   press: () {
                 //       Tenant();
                 //  },
-
               ],
             ),
             RoundedInputField(
@@ -101,7 +121,6 @@ class Body extends StatelessWidget {
               hintText: "Phone Number",
               onChanged: (value) {},
             ),
-
             //dropdown
             // DropdownButton<String>(
             //   value: dropdownValue,
@@ -126,15 +145,13 @@ class Body extends StatelessWidget {
             //     );
             //   }).toList(),
             // ),
-
-
-
             RoundedButton(
               text: "SIGNUP",
               press: () {
               },
             ),
-            SizedBox(height: size.height * 0.10),
+          SizedBox(width: 5,height:34,),
+          //  SizedBox(height: size.height * 0.10),
             AlreadyHaveAnAccountCheck(
               login: false,
               press: () {

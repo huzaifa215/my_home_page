@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/constants.dart';
-
 class RoundedButtonDashbord extends StatelessWidget {
   final String text;
   final Function press;
@@ -17,12 +16,12 @@ class RoundedButtonDashbord extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.8,
+      margin: EdgeInsets.symmetric(vertical: 2),
+      width: size.width * 0.2,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: BorderRadius.circular(1000),
         child: FlatButton(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          padding: EdgeInsets.symmetric(vertical: 28, horizontal:0),
           color: color,
           onPressed: press,
           child: Text(

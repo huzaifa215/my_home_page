@@ -61,14 +61,19 @@ class Body extends StatelessWidget {
                 );
               },
             ),
+            SizedBox(height: size.height * 0.05),
+            Text("Get Started with us"),
+            SizedBox(height: size.height * 0.02),
+
             //links
             RichText(
                 text: TextSpan(
                     children: [
-                      TextSpan(
-                          style: TextStyle(color: Colors.black),
-                          text: "Get Started with us"
-                      ),
+                      // TextSpan(
+                      //     style: TextStyle(color: Colors.black),
+                      //     text: "Get Started with us"
+                      // ),
+
                       TextSpan(
                          // style: linkText,
                           style: TextStyle(color: Colors.blueGrey),

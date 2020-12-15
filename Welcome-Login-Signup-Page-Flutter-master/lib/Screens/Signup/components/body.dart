@@ -6,6 +6,7 @@ import 'package:flutter_auth/Screens/Signup/components/or_divider.dart';
 import 'package:flutter_auth/Screens/Signup/components/social_icon.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
+import 'package:flutter_auth/components/rounded_button_dashbords.dart';
 import 'package:flutter_auth/components/rounded_cnfrm_field.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
@@ -14,6 +15,8 @@ import 'package:flutter_auth/dashboards/admin.dart';
 import 'package:flutter_auth/dashboards/landlord.dart';
 import 'package:flutter_auth/dashboards/tenant.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../constants.dart';
 
 
 class Body extends StatelessWidget {
@@ -44,26 +47,42 @@ class Body extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-
-                SocalIcon(
-                  iconSrc: "assets/icons/facebook.svg",
+                // admin dashbord
+                RoundedButtonDashbord(
+                  text: "Admin",
+                  color: kPrimaryLightColor,
+                  textColor: Colors.black,
                   press: () {
-                      LandLord();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Admin();
+                        },
+                      ),
+                    );
                   },
                 ),
-                SocalIcon(
-                  iconSrc: "assets/icons/twitter.svg",
-                  press: () {
-                    Admin();
 
-                  },
-                ),
-                SocalIcon(
-                  iconSrc: "assets/icons/google-plus.svg",
-                  press: () {
-                      Tenant();
-                 },
-                ),
+                // SocalIcon(
+                //   iconSrc: "assets/icons/facebook.svg",
+                //   press: () {
+                //       LandLord();
+                //   },
+                // ),
+                // SocalIcon(
+                //   iconSrc: "assets/icons/twitter.svg",
+                //   press: () {
+                //     Admin();
+                //
+                //   },
+                // ),
+                // SocalIcon(
+                //   iconSrc: "assets/icons/google-plus.svg",
+                //   press: () {
+                //       Tenant();
+                //  },
+
               ],
             ),
             RoundedInputField(

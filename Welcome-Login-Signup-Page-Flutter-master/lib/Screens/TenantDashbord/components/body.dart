@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
 import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
-import 'package:flutter_auth/Screens/LandLordDashbord/components/background.dart';
+import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
 import 'package:flutter_auth/Screens/Tenant/tenantsignup.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
@@ -23,69 +23,80 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
-              "LANDLORD DASHBOARD",
+              "ADMIN DASHBOARD",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
-            RoundedButton(
-              text: "All Posts",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
-              // press: () {
-              //  AdminDash();
-              // },
-            ),
-            SizedBox(height: size.height * 0.04),
-            RoundedButton(
-              text: "Pandding Posts",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
-              // press: () {
-              //  AdminDash();
-              // },
-
-            ),
-            SizedBox(height: size.height * 0.04),
-            RoundedButton(
-              text: "Add Posts",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
-              // press: () {
-              //  AdminDash();
-              // },
-
-            ),
-
-
+            // RoundedButton(
+            //   text: "All Post",
+            //   press: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) {
+            //           return LoginScreen();
+            //         },
+            //       ),
+            //     );
+            //   },
+            //   // press: () {
+            //   //  AdminDash();
+            //   // },
+            // ),
+            // SizedBox(height: size.height * 0.04),
+            // RoundedButton(
+            //   text: "Pandding Posts",
+            //   press: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) {
+            //           return LoginScreen();
+            //         },
+            //       ),
+            //     );
+            //   },
+            //   // press: () {
+            //   //  AdminDash();
+            //   // },
+            //
+            // ),
+            // SizedBox(height: size.height * 0.04),
+            // RoundedButton(
+            //   text: "",
+            //   press: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) {
+            //           return LoginScreen();
+            //         },
+            //       ),
+            //     );
+            //   },
               // press: () {
               //  AdminDash();
               // },
 
+            // ),
+            // SizedBox(height: size.height * 0.04),
+            // RoundedButton(
+            //   text: "LandLords",
+            //   press: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) {
+            //           return LoginScreen();
+            //         },
+            //       ),
+            //     );
+            //   },
+              // press: () {
+              //  AdminDash();
+              // },
 
+           // ),
 
 
             // press: () {

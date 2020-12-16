@@ -43,7 +43,7 @@ class Body extends StatelessWidget {
               //  AdminDash();
               // },
             ),
-
+            SizedBox(height: size.height * 0.04),
             RoundedButton(
               text: "Pandding Posts",
               press: () {
@@ -61,7 +61,7 @@ class Body extends StatelessWidget {
               // },
 
             ),
-
+            SizedBox(height: size.height * 0.04),
             RoundedButton(
               text: "Tenants",
               press: () {
@@ -79,7 +79,7 @@ class Body extends StatelessWidget {
               // },
 
             ),
-
+            SizedBox(height: size.height * 0.04),
             RoundedButton(
               text: "LandLords",
               press: () {

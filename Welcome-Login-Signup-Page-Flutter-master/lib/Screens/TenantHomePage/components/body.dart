@@ -30,11 +30,12 @@ class Body extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
+                  Image.asset('assets/images/pic.jpg'),
                   ListTile(
                     leading: Icon(Icons.arrow_drop_down_circle),
-                    title: const Text('Card title 1'),
+                    title: const Text('Property 1'),
                     subtitle: Text(
-                      'Secondary Text',
+                      'House of 5 mrla',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
@@ -53,22 +54,23 @@ class Body extends StatelessWidget {
                         onPressed: () {
                           // Perform some action
                         },
-                        child: const Text('ACTION 1'),
+                        child: const Text('VIEW'),
                       ),
                       FlatButton(
                         textColor: const Color(0xFF6200EE),
                         onPressed: () {
                           // Perform some action
                         },
-                        child: const Text('ACTION 2'),
+                        child: const Text(''),
                       ),
                     ],
                   ),
-                  Image.asset('assets/images/logo.png'),
+                  // Image.asset('assets/images/logo.png'),
                 ],
               ),
             ),
-              SizedBox(height: size.height * 0.04 ),
+
+            SizedBox(height: size.height * 0.05),
             Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
@@ -110,7 +112,90 @@ class Body extends StatelessWidget {
                 ],
               ),
             ),
-            
+            SizedBox(height: size.height * 0.05),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.arrow_drop_down_circle),
+                    title: const Text('Card title 1'),
+                    subtitle: Text(
+                      'Secondary Text',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 1'),
+                      ),
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 2'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: size.height * 0.05),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.arrow_drop_down_circle),
+                    title: const Text('Card title 1'),
+                    subtitle: Text(
+                      'Secondary Text',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 1'),
+                      ),
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 2'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
             // RoundedButton(
             //   text: "All Post",
             //   press: () {

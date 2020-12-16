@@ -20,13 +20,97 @@ class Body extends StatelessWidget {
     return Background(
       child: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+         mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              "ADMIN DASHBOARD",
-              style: TextStyle(fontWeight: FontWeight.bold),
+            AppBar(
+              title: const Text('Properties'),
             ),
-            SizedBox(height: size.height * 0.03),
+            //SizedBox(height: size.height * 0.04),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.arrow_drop_down_circle),
+                    title: const Text('Card title 1'),
+                    subtitle: Text(
+                      'Secondary Text',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 1'),
+                      ),
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 2'),
+                      ),
+                    ],
+                  ),
+                  Image.asset('assets/images/logo.png'),
+                ],
+              ),
+            ),
+              SizedBox(height: size.height * 0.04 ),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.arrow_drop_down_circle),
+                    title: const Text('Card title 1'),
+                    subtitle: Text(
+                      'Secondary Text',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 1'),
+                      ),
+                      FlatButton(
+                        textColor: const Color(0xFF6200EE),
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        child: const Text('ACTION 2'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            
             // RoundedButton(
             //   text: "All Post",
             //   press: () {

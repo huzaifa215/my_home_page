@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
 import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
-import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
+import 'package:flutter_auth/Screens/LandLordDashbord/components/background.dart';
 import 'package:flutter_auth/Screens/Tenant/tenantsignup.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
@@ -22,11 +22,11 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-        Text(
-          "ADMIN DASHBOARD",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        SizedBox(height: size.height * 0.03),
+            Text(
+              "ADMIN DASHBOARD",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: size.height * 0.03),
             RoundedButton(
               text: "All Post",
               press: () {
@@ -99,22 +99,22 @@ class Body extends StatelessWidget {
             ),
 
 
-              // press: () {
-              //  AdminDash();
-              // },
-        // Card(
-        // child: Column(
-        //   mainAxisSize: MainAxisSize.min,
-        //   children: <Widget>[
-        //     const ListTile(
-        //       leading: Icon(Icons.album, size: 50),
-        //       title: Text(''),
-        //       subtitle: Text('TWICE'),
+            // press: () {
+            //  AdminDash();
+            // },
+            // Card(
+            // child: Column(
+            //   mainAxisSize: MainAxisSize.min,
+            //   children: <Widget>[
+            //     const ListTile(
+            //       leading: Icon(Icons.album, size: 50),
+            //       title: Text(''),
+            //       subtitle: Text('TWICE'),
 
-      //       ),
-      //     ],
-      //   ),
-      // ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
 
             // SizedBox(height: size.height * 0.09),
             // Text(

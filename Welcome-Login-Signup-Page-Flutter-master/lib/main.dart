@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'dart:async';
-import 'package:flutter/material.dart';
-
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,

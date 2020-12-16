@@ -1,6 +1,7 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
+import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Admin/components/background.dart';
@@ -150,7 +151,19 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "SIGNUP",
               press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
               },
+              // press: () {
+              //  AdminDash();
+              // },
+
             ),
             SizedBox(width: 5,height:34,),
             //  SizedBox(height: size.height * 0.10),

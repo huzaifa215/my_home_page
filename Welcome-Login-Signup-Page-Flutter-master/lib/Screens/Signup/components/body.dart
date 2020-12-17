@@ -40,21 +40,21 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 // admin dashbord
-                RoundedButtonDashbord(
-                  text: "Admin",
-                  color: kPrimaryLightColor,
-                  textColor: Colors.black,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return AdminSignUp();
-                        },
-                      ),
-                    );
-                  },
-                ),
+                // RoundedButtonDashbord(
+                //   text: "Admin",
+                //   color: kPrimaryLightColor,
+                //   textColor: Colors.black,
+                //   press: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //         builder: (context) {
+                //           return AdminSignUp();
+                //         },
+                //       ),
+                //     );
+                //   },
+                // ),
                 RoundedButtonDashbord(
                   text: "Tenant",
                   color: kPrimaryLightColor,

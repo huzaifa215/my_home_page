@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
+import 'package:flutter_auth/Screens/LandLordDashbord/landlorddash.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/TenantHomePage.dart';
+import 'package:flutter_auth/Screens/TenantHomePage/components/view_property.dart';
 import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: TenantHomePage(),// WelcomeScreen()
+      home:  TenantHomePage(),// WelcomeScreen()
     );
   }
 }

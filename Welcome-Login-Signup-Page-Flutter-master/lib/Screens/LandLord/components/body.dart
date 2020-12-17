@@ -4,6 +4,7 @@ import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
 import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/LandLord/components/background.dart';
+import 'package:flutter_auth/Screens/Tenant/tenantsignup.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_button_dashbords.dart';
@@ -39,21 +40,21 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 // admin dashbord
-                RoundedButtonDashbord(
-                  text: "Admin",
-                  color: kPrimaryLightColor,
-                  textColor: Colors.black,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return AdminSignUp();
-                        },
-                      ),
-                    );
-                  },
-                ),
+                // RoundedButtonDashbord(
+                //   text: "Admin",
+                //   color: kPrimaryLightColor,
+                //   textColor: Colors.black,
+                //   press: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //         builder: (context) {
+                //           return AdminSignUp();
+                //         },
+                //       ),
+                //     );
+                //   },
+                // ),
                 RoundedButtonDashbord(
                   text: "Tenant",
                   color: kPrimaryLightColor,
@@ -63,7 +64,7 @@ class Body extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          //return SignUpScreen()
+                          return TenantSignUp()
                           ;
                         },
                       ),

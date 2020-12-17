@@ -1,17 +1,14 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
-import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
-import 'package:flutter_auth/Screens/Login/login_screen.dart';
+
 import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
-import 'package:flutter_auth/Screens/Tenant/tenantsignup.dart';
-import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
+import 'package:flutter_auth/Screens/TenantHomePage/ViewPropertRun.dart';
+import 'package:flutter_auth/Screens/TenantHomePage/components/view_property.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_button_dashbords.dart';
-import 'package:flutter_auth/components/rounded_cnfrm_field.dart';
-import 'package:flutter_auth/components/rounded_input_field.dart';
-import 'package:flutter_auth/components/rounded_password_field.dart';
-import 'package:flutter_auth/components/rounded_phone_number.dart';
+
+import '../../../constants.dart';
+
 // import '../../constants.dart';
 class Body extends StatelessWidget {
   @override
@@ -54,7 +51,42 @@ class Body extends StatelessWidget {
                         onPressed: () {
                           // Perform some action
                         },
-                        child: const Text('VIEW'),
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color:kPrimaryColor)),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return ViewPropertyRun();
+                                },
+                              ),
+                            );
+                          },
+                          color: kPrimaryColor,
+                          textColor: Colors.white,
+                          child: Text("View".toUpperCase(),
+                              style: TextStyle(fontSize: 14),),
+                          focusColor: Colors.black,
+                        ),
+                        // child: RoundedButton(
+                        //   text: "View",
+                        //   color: kPrimaryLightColor,
+                        //   textColor: Colors.black,
+                        //   press: () {
+                        //     Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //         builder: (context) {
+                        //           return ViewProperty();
+                        //         },
+                        //       ),
+                        //     );
+                        //   },
+                        // ),
+
                       ),
                       FlatButton(
                         textColor: const Color(0xFF6200EE),

@@ -2,6 +2,8 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
 import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
+import 'package:flutter_auth/Screens/LandLordDashbord/AllPostScreen.dart';
+import 'package:flutter_auth/Screens/LandLordDashbord/components/padding_posts/Allposts.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/LandLordDashbord/components/background.dart';
 import 'package:flutter_auth/Screens/Tenant/tenantsignup.dart';
@@ -52,7 +54,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return AllPostScreen();
                     },
                   ),
                 );

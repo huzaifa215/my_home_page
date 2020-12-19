@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 
 import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
+import 'package:flutter_auth/Screens/LandLordDashbord/ViewPostScreen.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/ViewPropertRun.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
 
@@ -21,7 +22,7 @@ class AllPost extends StatelessWidget {
           children: <Widget>[
 
             AppBar(
-              title: const Text('Properties'),
+              title: const Text('Pendding Posts'),
               actions: <Widget>[
                 IconButton(
                     icon: const Icon(Icons.search),
@@ -93,14 +94,14 @@ class AllPost extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return ViewPropertyRun();
+                                  return ViewPostScreen();
                                 },
                               ),
                             );
                           },
                           color: kPrimaryColor,
                           textColor: Colors.white,
-                          child: Text("View".toUpperCase(),
+                          child: Text("Edit".toUpperCase(),
                             style: TextStyle(fontSize: 14),),
                           focusColor: Colors.black,
                         ),
@@ -126,7 +127,26 @@ class AllPost extends StatelessWidget {
                         onPressed: () {
                           // Perform some action
                         },
-                        child: const Text(''),
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color:kPrimaryColor)),
+                          onPressed: () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) {
+                            //       return ViewPropertyRun();
+                            //     },
+                            //   ),
+                            // );
+                          },
+                          color: kPrimaryColor,
+                          textColor: Colors.white,
+                          child: Text("Delete".toUpperCase(),
+                            style: TextStyle(fontSize: 14),),
+                          focusColor: Colors.black,
+                        ),
                       ),
                     ],
                   ),

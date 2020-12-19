@@ -24,20 +24,25 @@ class AddPost extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: size.height * 0.09),
-            Text(
-              "SIGNUP",
-              style: TextStyle(fontWeight: FontWeight.bold),
+            AppBar(
+              title: const Text('ADD POST'),
             ),
-            SizedBox(height: size.height * 0.01),
+            SizedBox(height: size.height * 0.11),
+
+            // Text(
+            //   "ADD POST",
+            //   style: TextStyle(fontWeight: FontWeight.bold),
+            // ),
+
+          //  SizedBox(height: size.height * 0.01),
             // SvgPicture.asset(
             //   "assets/icons/signup.svg",
             //   height: size.height * 0.35,
             // ),
-            Image(
-                image:AssetImage('assets/images/logo.png')
-            ),
-            SizedBox(height: size.height * 0.02),
+            // Image(
+            //     image:AssetImage('assets/images/logo.png')
+            // ),
+            //SizedBox(height: size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -57,37 +62,37 @@ class AddPost extends StatelessWidget {
                 //     );
                 //   },
                 // ),
-                RoundedButtonDashbord(
-                  text: "Tenant",
-                  color: kPrimaryLightColor,
-                  textColor: Colors.black,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return TenantSignUp();
-                        },
-                      ),
-                    );
-                  },
-                ),
+                // RoundedButtonDashbord(
+                //   text: "Tenant",
+                //   color: kPrimaryLightColor,
+                //   textColor: Colors.black,
+                //   press: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //         builder: (context) {
+                //           return TenantSignUp();
+                //         },
+                //       ),
+                //     );
+                //   },
+                // ),
 
-                RoundedButtonDashbord(
-                  text: "LandLord",
-                  color: kPrimaryLightColor,
-                  textColor: Colors.black,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return LandLordSignUp();
-                        },
-                      ),
-                    );
-                  },
-                ),
+                // RoundedButtonDashbord(
+                //   text: "LandLord",
+                //   color: kPrimaryLightColor,
+                //   textColor: Colors.black,
+                //   press: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //         builder: (context) {
+                //           return LandLordSignUp();
+                //         },
+                //       ),
+                //     );
+                //   },
+                // ),
                 // SocalIcon(
                 //
                 //   iconSrc: "assets/icons/facebook.svg",
@@ -110,19 +115,27 @@ class AddPost extends StatelessWidget {
               ],
             ),
             RoundedInputField(
-              hintText: "Your Email",
+              hintText: "Location",
               onChanged: (value) {},
-            ),
-            RoundedPasswordField(
-              onChanged: (value) {},
-            ),
-
-            // rounded buttonn
-            RoundedCnfrmField(
-              onChanged:(value){},
             ),
             RoundedPhoneNumber(
-              hintText: "Phone Number",
+              hintText: "Price",
+              onChanged: (value) {},
+            ),
+            RoundedPhoneNumber(
+              hintText: "Area",
+              onChanged: (value) {},
+            ),
+            RoundedPhoneNumber(
+              hintText: "Unit",
+              onChanged: (value) {},
+            ),
+            RoundedPhoneNumber(
+              hintText: "Description",
+              onChanged: (value) {},
+            ),
+            RoundedPhoneNumber(
+              hintText: "Description",
               onChanged: (value) {},
             ),
             //dropdown
@@ -150,25 +163,25 @@ class AddPost extends StatelessWidget {
             //   }).toList(),
             // ),
             RoundedButton(
-              text: "SIGNUP",
+              text: "SUBMIT",
               press: () {
               },
             ),
-            SizedBox(width: 5,height:34,),
+            //SizedBox(width: 5,height:34,),
             //  SizedBox(height: size.height * 0.10),
-            AlreadyHaveAnAccountCheck(
-              login: false,
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
-            ),
+            // AlreadyHaveAnAccountCheck(
+            //   login: false,
+            //   press: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) {
+            //           return LoginScreen();
+            //         },
+            //       ),
+            //     );
+            //   },
+            // ),
             Divider(thickness: 2,
               color:Colors.grey,)
 

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/components/text_field_container.dart';
 import 'package:flutter_auth/constants.dart';
-
+import 'package:badges/badges.dart';
 class RoundedPrice extends StatelessWidget {
   final String hintText;
-  final IconData icon;
+
   final ValueChanged<String> onChanged;
   const RoundedPrice ({
     Key key,
     this.hintText,
-    this.icon = Icons.settings,
+    //this.icon = Icons.dollars,
     this.onChanged,
   }) : super(key: key);
 
@@ -20,10 +20,7 @@ class RoundedPrice extends StatelessWidget {
         onChanged: onChanged,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: kPrimaryColor,
-          ),
+          
           hintText: hintText,
           border: InputBorder.none,
         ),

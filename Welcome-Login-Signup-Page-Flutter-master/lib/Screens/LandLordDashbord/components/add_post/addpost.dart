@@ -6,12 +6,17 @@ import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Signup/components/background.dart';
 import 'package:flutter_auth/Screens/Tenant/tenantsignup.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
+import 'package:flutter_auth/components/rounded_area.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_button_dashbords.dart';
 import 'package:flutter_auth/components/rounded_cnfrm_field.dart';
+import 'package:flutter_auth/components/rounded_decription.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
+import 'package:flutter_auth/components/rounded_input_location.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_auth/components/rounded_phone_number.dart';
+import 'package:flutter_auth/components/rounded_price.dart';
+import 'package:flutter_auth/components/rounded_unit.dart';
 
 import '../../../../constants.dart';
 
@@ -27,22 +32,8 @@ class AddPost extends StatelessWidget {
             AppBar(
               title: const Text('ADD POST'),
             ),
-            SizedBox(height: size.height * 0.11),
+            SizedBox(height: size.height * 0.06),
 
-            // Text(
-            //   "ADD POST",
-            //   style: TextStyle(fontWeight: FontWeight.bold),
-            // ),
-
-          //  SizedBox(height: size.height * 0.01),
-            // SvgPicture.asset(
-            //   "assets/icons/signup.svg",
-            //   height: size.height * 0.35,
-            // ),
-            // Image(
-            //     image:AssetImage('assets/images/logo.png')
-            // ),
-            //SizedBox(height: size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -114,30 +105,34 @@ class AddPost extends StatelessWidget {
                 //  },
               ],
             ),
-            RoundedInputField(
+            RoundedInputLocation(
               hintText: "Location",
               onChanged: (value) {},
             ),
-            RoundedPhoneNumber(
+            RoundedPrice(
               hintText: "Price",
               onChanged: (value) {},
             ),
-            RoundedPhoneNumber(
+            RoundedArea(
               hintText: "Area",
               onChanged: (value) {},
             ),
-            RoundedPhoneNumber(
+            RoundedUnit(
               hintText: "Unit",
               onChanged: (value) {},
             ),
-            RoundedPhoneNumber(
+//image
+            RoundedDecription(
               hintText: "Description",
               onChanged: (value) {},
             ),
-            RoundedPhoneNumber(
-              hintText: "Description",
-              onChanged: (value) {},
+            SizedBox(height: size.height * 0.04),
+            RoundedButton(
+              text: "UPLOAD IMAGES",
+              press: () {
+              },
             ),
+
             //dropdown
             // DropdownButton<String>(
             //   value: dropdownValue,
@@ -162,26 +157,13 @@ class AddPost extends StatelessWidget {
             //     );
             //   }).toList(),
             // ),
+           //izedBox(height: size.height * 0.04),
             RoundedButton(
               text: "SUBMIT",
               press: () {
               },
             ),
-            //SizedBox(width: 5,height:34,),
-            //  SizedBox(height: size.height * 0.10),
-            // AlreadyHaveAnAccountCheck(
-            //   login: false,
-            //   press: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: (context) {
-            //           return LoginScreen();
-            //         },
-            //       ),
-            //     );
-            //   },
-            // ),
+
             Divider(thickness: 2,
               color:Colors.grey,)
 

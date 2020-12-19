@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 import 'package:flutter_auth/Screens/LandLordDashbord/landlorddash.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/TenantHomePage.dart';
+import 'package:flutter_auth/Screens/TenantHomePage/components/appbarstatus.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/components/view_property.dart';
 import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
@@ -38,7 +39,7 @@ class _ScreenState extends State<Screen> {
   Widget build(BuildContext context) {
     return Center(
       child: SplashScreen(
-        seconds:5,
+        seconds:1,
         backgroundColor: Colors.green[200],
         loaderColor:Colors.black,
         photoSize:200.0,

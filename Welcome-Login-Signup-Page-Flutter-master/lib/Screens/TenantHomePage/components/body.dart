@@ -1,17 +1,18 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 
 import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/ViewPropertRun.dart';
-import 'package:flutter_auth/Screens/TenantHomePage/components/view_property.dart';
-import 'package:flutter_auth/components/rounded_button.dart';
-import 'package:flutter_auth/components/rounded_button_dashbords.dart';
-
+import 'package:flutter_search_bar/flutter_search_bar.dart';
 import '../../../constants.dart';
+import 'appbarstatus.dart';
 
 // import '../../constants.dart';
 class Body extends StatelessWidget {
   @override
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+  final SnackBar snackBar = const SnackBar(content: Text('Showing Snackbar'));
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
@@ -19,9 +20,42 @@ class Body extends StatelessWidget {
         child: Column(
          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+
             AppBar(
               title: const Text('Properties'),
+              actions: <Widget>[
+                IconButton(
+                  icon: const Icon(Icons.search),
+                  tooltip: 'Show Snackbar',
+                  onPressed: () {
+                   // scaffoldKey.currentState.showSnackBar(snackBar);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AdminDash();
+                        },
+                      ),
+                    );
+                  }
+                ),
+                IconButton(
+                  icon: const Icon(Icons.navigate_next),
+                  tooltip: 'Next page',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AdminDash();
+                        },
+                      ),
+                    );
+                  },
+                ),
+              ],
             ),
+
             //SizedBox(height: size.height * 0.04),
             Card(
               clipBehavior: Clip.antiAlias,
@@ -471,4 +505,7 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
+
 

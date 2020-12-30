@@ -268,11 +268,9 @@ class Body extends StatelessWidget {
                     ),
 
                   ),
-                  Buttom(),
           ],
         ),
       ),
-
     ],
     ),
     )

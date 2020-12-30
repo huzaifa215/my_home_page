@@ -24,13 +24,10 @@ class _ButtomState extends State<Buttom> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageStorage(
-        child: currentScreen,
+        child: TenantHomePage(),
         bucket: bucket,
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
@@ -56,11 +53,11 @@ class _ButtomState extends State<Buttom> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.dashboard,
+                          Icons.home,
                           color: currentTab == 0 ? Colors.blue : Colors.grey,
                         ),
                         Text(
-                          'Dashboard',
+                          'Home',
                           style: TextStyle(
                             color: currentTab == 0 ? Colors.blue : Colors.grey,
                           ),
@@ -81,11 +78,11 @@ class _ButtomState extends State<Buttom> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.chat,
+                          Icons.calculate,
                           color: currentTab == 1 ? Colors.blue : Colors.grey,
                         ),
                         Text(
-                          'Chats',
+                          'Calculator',
                           style: TextStyle(
                             color: currentTab == 1 ? Colors.blue : Colors.grey,
                           ),
@@ -112,11 +109,11 @@ class _ButtomState extends State<Buttom> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.dashboard,
+                          Icons.search,
                           color: currentTab == 2 ? Colors.blue : Colors.grey,
                         ),
                         Text(
-                          'Profile',
+                          'Search',
                           style: TextStyle(
                             color: currentTab == 2 ? Colors.blue : Colors.grey,
                           ),
@@ -137,11 +134,11 @@ class _ButtomState extends State<Buttom> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.chat,
+                          Icons.person,
                           color: currentTab == 3 ? Colors.blue : Colors.grey,
                         ),
                         Text(
-                          'Settings',
+                          'profile',
                           style: TextStyle(
                             color: currentTab == 3 ? Colors.blue : Colors.grey,
                           ),

@@ -1,5 +1,6 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/ButtomBarRun.dart';
 import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 
 import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
@@ -47,7 +48,6 @@ class Body extends StatelessWidget {
         child: Column(
          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-
             AppBar(
               title: const Text('Properties'),
               actions: <Widget>[
@@ -266,8 +266,8 @@ class Body extends StatelessWidget {
                       'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
-
                   ),
+
           ],
         ),
       ),

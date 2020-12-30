@@ -1,5 +1,6 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/ButtomBarRun.dart';
 import 'package:flutter_auth/Screens/Admin/admin_signup.dart';
 import 'package:flutter_auth/Screens/LandLord/landlordsignup.dart';
 import 'package:flutter_auth/Screens/LandLordDashbord/landlorddash.dart';
@@ -67,7 +68,7 @@ class Body extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return Buttom();
+                          return ButtomBarRun();
                         },
                       ),
                     );

@@ -1,9 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/ButtomBarRun.dart';
 import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Signup/signup_screen.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/TenantHomePage.dart';
+import 'package:flutter_auth/calculator.dart';
+import 'package:flutter_auth/calculatorRun.dart';
 
 class Buttom extends StatefulWidget {
   @override
@@ -14,7 +17,7 @@ class _ButtomState extends State<Buttom> {
   int currentTab = 0; // to keep track of active tab index
   final List<Widget> screens = [
     TenantHomePage(),
-    AdminDash(),
+    Calculator(),
     LoginScreen(),
     SignUpScreen(),
   ]; // to store nested tabs
@@ -70,7 +73,7 @@ class _ButtomState extends State<Buttom> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                            SignUpScreen(); // if user taps on this dashboard tab will be active
+                            TenantHomePage(); // if user taps on this dashboard tab will be active
                         currentTab = 1;
                       });
                     },
@@ -101,7 +104,7 @@ class _ButtomState extends State<Buttom> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                            LoginScreen(); // if user taps on this dashboard tab will be active
+                            CalculatorRun(); // if user taps on this dashboard tab will be active
                         currentTab = 2;
                       });
                     },

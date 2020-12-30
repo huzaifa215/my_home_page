@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/LandLordDashbord/landlorddash.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/TenantHomePage.dart';
+import 'package:flutter_auth/buttombar.dart';
 
 import 'package:flutter_auth/constants.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),// WelcomeScreen()
+      home: WelcomeScreen(),
     );
   }
 }

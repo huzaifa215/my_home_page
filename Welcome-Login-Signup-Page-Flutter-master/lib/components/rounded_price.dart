@@ -20,7 +20,7 @@ class RoundedPrice extends StatelessWidget {
         onChanged: onChanged,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
-          
+
           hintText: hintText,
           border: InputBorder.none,
         ),

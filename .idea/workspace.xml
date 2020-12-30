@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66d073ff-e468-4316-af77-24d09c057752" name="Default Changelist" comment="" />
+    <list default="true" id="66d073ff-e468-4316-af77-24d09c057752" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/my_home_page.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_home_page.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/UI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/lib/Screens/TenantHomePage/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/lib/Screens/TenantHomePage/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/lib/components/rounded_price.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/lib/components/rounded_price.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Welcome-Login-Signup-Page-Flutter-master/lib/main.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/AdminDashbord/admindash.dart';
 
 import 'package:flutter_auth/Screens/AdminDashbord/components/background.dart';
+import 'package:flutter_auth/Screens/LandLordDashbord/landlorddash.dart';
 import 'package:flutter_auth/Screens/TenantHomePage/ViewPropertRun.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
 import '../../../constants.dart';
@@ -11,9 +12,29 @@ import 'appbarstatus.dart';
 // import '../../constants.dart';
 class Body extends StatelessWidget {
   @override
+  int currentIndex = 0;
+
+  final List<Widget> _children = [
+    PlaceholderWidget(Colors.white),
+    PlaceholderWidget(Colors.deepOrange),
+    PlaceholderWidget(Colors.green)
+  ];
+
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   final SnackBar snackBar = const SnackBar(content: Text('Showing Snackbar'));
+
+  int onTabTapped() {
+
+      return currentIndex++ ;
+
+  }
+  // void onTabTapped(int index) {
+  //   setState(() {
+  //     _currentIndex = index;
+  //   });
+  // }
   Widget build(BuildContext context) {
+
     Size size = MediaQuery.of(context).size;
     return Background(
       child: SingleChildScrollView(
@@ -498,10 +519,112 @@ class Body extends StatelessWidget {
             // ),
             // Divider(thickness: 2,
             //   color:Colors.grey,)
+            BottomNavigationBar(
+              onTap: (value){
+                  int a=onTabTapped();
+                  if (a==1){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AdminDash();
+                        },
+                      ),
+                    );
+                  }
+                  else if (a==2){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LandLordDash();
+                        },
+                      ),
+                    );
+                  }
+                  else if (a==1){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AdminDash();
+                        },
+                      ),
+                    );
+                  }
+                  else if (a==1){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AdminDash();
+                        },
+                      ),
+                    );
+                  }
+
+
+                  }
+              , // new
+              currentIndex: currentIndex, // new
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: Color(0xFF6200EE),
+              selectedItemColor: Colors.white,
+              unselectedItemColor: Colors.white,
+              selectedFontSize: 14,
+              //onTap: onTabTapped, // new
+             // currentIndex: _currentIndex,
+              unselectedFontSize: 14,
+
+             // onTap: (value) {
+             //      //return LandLordDash();
+             //   Navigator.push(
+             //     context,
+             //     MaterialPageRoute(
+             //       builder: (context) {
+             //         return AdminDash();
+             //       },
+             //     ),
+             //   );
+             //  },
+              items: [
+                BottomNavigationBarItem(
+
+                  title: Text('Home'),
+                  icon: Icon(Icons.home),
+
+                ),
+                BottomNavigationBarItem(
+                  title: Text('Calculator'),
+                  icon: Icon(Icons.calculate),
+                ),
+                BottomNavigationBarItem(
+                  title: Text('Search'),
+                  icon: Icon(Icons.search),
+                ),
+                BottomNavigationBarItem(
+                  title: Text('music'),
+                  icon: Icon(Icons.calculate),
+                ),
+              ],
+            )
 
           ],
         ),
       ),
+
+    );
+  }
+}
+class PlaceholderWidget extends StatelessWidget {
+  final Color color;
+
+  PlaceholderWidget(this.color);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: color,
     );
   }
 }

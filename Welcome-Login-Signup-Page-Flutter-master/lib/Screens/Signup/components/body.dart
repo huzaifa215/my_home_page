@@ -16,8 +16,24 @@ import 'package:flutter_auth/components/rounded_cnfrm_field.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_auth/components/rounded_phone_number.dart';
+import 'package:flutter_auth/utils/Requests.dart';
+import 'package:flutter_auth/utils/dto/signup_response.dart';
+import 'package:flutter_auth/utils/pref_utils.dart';
 import '../../../constants.dart';
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  String emailController;
+  String passwordController;
+  String confirmController;
+  String phoneController;
+  String userName;
+  double tenant=0.1;
+  double lanlord=1;
+  String category="Landlord";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -61,33 +77,27 @@ class Body extends StatelessWidget {
                 // ),
                 RoundedButtonDashbord(
                   text: "Tenant",
-                  color: kPrimaryLightColor,
+                  color: kPrimaryColor.withOpacity(tenant),
                   textColor: Colors.black,
                   press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return ButtomBarRun();
-                        },
-                      ),
-                    );
+                        setState(() {
+                          tenant=1;
+                          lanlord=0.1;
+                          category="Tenant";
+                        });
                   },
                 ),
 
                 RoundedButtonDashbord(
                   text: "LandLord",
-                  color: kPrimaryLightColor,
+                  color: kPrimaryColor.withOpacity(lanlord),
                   textColor: Colors.black,
                   press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                        return LandLordDash();
-                        },
-                      ),
-                    );
+                    setState(() {
+                      tenant=0.1;
+                      lanlord=1;
+                      category="Landlord";
+                    });
                   },
                 ),
                 // SocalIcon(
@@ -112,20 +122,35 @@ class Body extends StatelessWidget {
               ],
             ),
             RoundedInputField(
-              hintText: "Your Email",
-              onChanged: (value) {},
+              hintText: "UserName",
+              onChanged: (value) {
+                userName=value;
+              },
             ),
+            RoundedInputField(
+              hintText: "Your Email",
+              onChanged: (value) {
+                emailController=value;
+              },
+            ),
+
             RoundedPasswordField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                passwordController=value;
+              },
             ),
 
             // rounded buttonn
             RoundedCnfrmField(
-              onChanged:(value){},
+              onChanged:(value){
+                confirmController=value;
+              },
             ),
             RoundedPhoneNumber(
               hintText: "Phone Number",
-              onChanged: (value) {},
+              onChanged: (value) {
+                phoneController=value;
+              },
             ),
             //dropdown
             // DropdownButton<String>(
@@ -153,15 +178,17 @@ class Body extends StatelessWidget {
             // ),
             RoundedButton(
               text: "SIGNUP",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+              press: () async {
+                SignUpResponse response=await Requests.registerUser(userName, emailController, passwordController, phoneController,category, context);
+                if(response!=null)
+                  {
+                    PreferenceUtils.setString("userName", response.userName);
+                    PreferenceUtils.setString("email", response.email);
+                    PreferenceUtils.setString("token", response.token.toString());
+                    PreferenceUtils.setString("id", response.id.toString());
+                    PreferenceUtils.setString("isVerified", response.isVerified.toString());
+                    Navigator.pop(context);
+                  }
               },
             ),
           SizedBox(width: 5,height:34,),

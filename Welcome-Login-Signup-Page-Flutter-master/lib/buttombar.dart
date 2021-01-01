@@ -81,7 +81,7 @@ class _ButtomState extends State<Buttom> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.calculate,
+                          Icons.vertical_align_center,
                           color: currentTab == 1 ? Colors.blue : Colors.grey,
                         ),
                         Text(

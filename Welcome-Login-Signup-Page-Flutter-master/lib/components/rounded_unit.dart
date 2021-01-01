@@ -9,7 +9,7 @@ class RoundedUnit extends StatelessWidget {
   const RoundedUnit ({
     Key key,
     this.hintText,
-    this.icon = Icons.subscript_outlined,
+    this.icon = Icons.outlined_flag,
     this.onChanged,
   }) : super(key: key);
 

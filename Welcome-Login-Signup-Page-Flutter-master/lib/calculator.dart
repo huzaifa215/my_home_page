@@ -76,7 +76,7 @@ class Calculator extends StatelessWidget {
           );
         },
         tooltip: 'Show me the value!',
-        child: Icon(Icons.calculate),
+        child: Icon(Icons.vertical_align_center),
       ),
             // RoundedButton(
             //   text: "SUBMIT",
